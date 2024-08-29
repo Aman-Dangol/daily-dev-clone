@@ -6,7 +6,7 @@ import { Telescope, MessageCircleMore, Globe, Users } from "lucide-react";
 export default function Discover({ showNav }) {
   return (
     <section className=" [&>*]:mb-1 ">
-      <LightHeading text="Discover"></LightHeading>
+      <LightHeading text="Discover" showNav={showNav}></LightHeading>
       <GenericNavComponent
         text="Explore"
         Icon={Telescope}

@@ -5,7 +5,7 @@ import { Atom, Plus } from "lucide-react";
 export default function Squads({showNav}) {
   return (
     <section className="[&>*]:mb-1">
-      <LightHeading text="Squads"></LightHeading>
+      <LightHeading text="Squads" showNav={showNav}></LightHeading>
       <GenericNavComponent
         text="public Squads"
         Icon={Atom}

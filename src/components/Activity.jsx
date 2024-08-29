@@ -5,7 +5,7 @@ import { Eye, Link, Bookmark } from "lucide-react";
 export default function Activity({showNav}) {
   return (
     <section className=" [&>*]:mb-3 ">
-      <LightHeading text="Activity"></LightHeading>
+      <LightHeading text="Activity" showNav={showNav}></LightHeading>
       <GenericNavComponent
         text="Submit a link"
         Icon={Link} showNav={showNav}

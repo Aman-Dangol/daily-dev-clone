@@ -6,8 +6,8 @@ import Button from "./Button";
 export default function NavBar({ showNav, setShowNav }) {
   return (
     <div
-      className={`bg-slate-700 text-sm border-r-[1px] text-white h-screen  fixed w-[20%] p-2 transition duration-300 ${
-        showNav ? `translate-x-0` : `lg:-translate-x-[83%] -translate-x-[70%]`
+      className={`bg-slate-700 pt-2 z-40 text-sm border-slate-500 border-r-[1px] text-white h-screen  fixed w-[15%] p-2 transition duration-300 ${
+        showNav ? `translate-x-0` : `lg:-translate-x-[80%] sm:-translate-x-[60%]    -translate-x-[30%]`
       }`}
     >
       <UserFeed showNav={showNav}></UserFeed>

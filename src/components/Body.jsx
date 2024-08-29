@@ -1,11 +1,16 @@
+import FeedSetting from "./FeedSetting";
+import Contents from "./Contents";
+import Hornav from "./Hornav";
 export default function Body({ showNav }) {
   return (
-    <div
-      className={`bg-black  ${
-        !showNav ? `ml-11  ` : `ml-0 `
-      } pl-10  w-full h-screen text-white`}
+    <section
+      className={`bg-slate-600  ${
+        !showNav ? `ml-10  ` : `ml-[15%] `
+      } pl-8 p-4  w-full min-h-screen text-white`}
     >
-      this is body
-    </div>
+      <Hornav></Hornav>
+      <FeedSetting></FeedSetting>
+      <Contents></Contents>
+    </section>
   );
 }
