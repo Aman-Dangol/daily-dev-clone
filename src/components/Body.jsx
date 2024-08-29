@@ -1,6 +1,8 @@
 import FeedSetting from "./FeedSetting";
 import Contents from "./Contents";
 import Hornav from "./Hornav";
+import Socials from "./Socials";
+import ScrollUp from "./ScrollUp";
 export default function Body({ showNav }) {
   return (
     <section
@@ -9,7 +11,11 @@ export default function Body({ showNav }) {
       } pl-8 p-4  w-full min-h-screen text-white`}
     >
       <Hornav></Hornav>
-      <FeedSetting></FeedSetting>
+      <div className="flex flex-row justify-between items-center">
+        <FeedSetting></FeedSetting>
+        <Socials></Socials>
+        <ScrollUp></ScrollUp>
+      </div>
       <Contents></Contents>
     </section>
   );
