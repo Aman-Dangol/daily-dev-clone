@@ -4,13 +4,15 @@ import { ChevronRight } from "lucide-react";
 export default function Button({ showNav, setShowNav }) {
   return (
     <button
-      className="absolute top-0 right-0"
+      className={`absolute top-0 ${
+        showNav ? `-right-2` : `-right-4`
+      }  bg-white rounded border-white border -1`}
       onClick={() => {
         setShowNav(!showNav);
         console.log(showNav);
       }}
     >
-      {showNav ? <ChevronLeft /> : <ChevronRight />}
+      {showNav ? <ChevronLeft color="black" /> : <ChevronRight color="black" />}
     </button>
   );
 }

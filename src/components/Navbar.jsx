@@ -6,14 +6,14 @@ import Button from "./Button";
 export default function NavBar({ showNav, setShowNav }) {
   return (
     <div
-      className={`bg-slate-700 text-sm text-white h-screen  fixed w-[20%] p-2 transition duration-300 ${
-        showNav ? `translate-x-0` : `-translate-x-[90%]`
+      className={`bg-slate-700 text-sm border-r-[1px] text-white h-screen  fixed w-[20%] p-2 transition duration-300 ${
+        showNav ? `translate-x-0` : `lg:-translate-x-[83%] -translate-x-[70%]`
       }`}
     >
-      <UserFeed></UserFeed>
-      <Squads></Squads>
-      <Discover></Discover>
-      <Activity></Activity>
+      <UserFeed showNav={showNav}></UserFeed>
+      <Squads showNav={showNav}></Squads>
+      <Discover showNav={showNav}></Discover>
+      <Activity showNav={showNav}></Activity>
       <Button showNav={showNav} setShowNav={setShowNav}></Button>
     </div>
   );
