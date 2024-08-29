@@ -8,7 +8,7 @@ export default function ScrollUp() {
   }
   return (
     <button
-      className="fixed bottom-[5%] right-[5%] bg-slate-400 text-white w-[5%] rounded-2xl h-[10%] flex justify-center items-center "
+      className="fixed bottom-[5%] right-[5%] bg-slate-400 text-white w-[80px] rounded-2xl h-[80px] flex justify-center items-center "
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
       <ChevronUp></ChevronUp>
