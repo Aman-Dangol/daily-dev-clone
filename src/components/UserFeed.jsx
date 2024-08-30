@@ -1,30 +1,17 @@
 import { Plus, User } from "lucide-react";
 import GenericNavComponent from "./GenericNavComponent";
-
-export default function UserFeed({ showNav }) {
+import { USER } from "../constant/user";
+export default function UserFeed() {
   return (
     <section className=" [&>*]:mb-1 ">
-      <GenericNavComponent
-        showNav={showNav}
-        text="My Feed"
-        Icon={User}
-      ></GenericNavComponent>
-      <GenericNavComponent showNav={showNav} text="js"></GenericNavComponent>
-      <GenericNavComponent
-        showNav={showNav}
-        text="mysqlDB"
-      ></GenericNavComponent>
-      <GenericNavComponent
-        showNav={showNav}
-        text="express"
-      ></GenericNavComponent>
-      <GenericNavComponent showNav={showNav} text="react"></GenericNavComponent>
-      <GenericNavComponent
-        text="custom Feed"
-        Icon={Plus}
-        round={true}
-        showNav={showNav}
-      ></GenericNavComponent>
+      {USER.map((data,i) => (
+        <GenericNavComponent
+        key={i}
+          text={data.text}
+          Icon={data.logo}
+          round={data.round}
+        ></GenericNavComponent>
+      ))}
     </section>
   );
 }

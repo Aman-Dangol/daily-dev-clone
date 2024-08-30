@@ -1,20 +1,19 @@
 import LightHeading from "./LightHeading";
 import GenericNavComponent from "./GenericNavComponent";
-import { Eye, Link, Bookmark } from "lucide-react";
-
-export default function Activity({showNav}) {
+import { ACTIVITY } from "../constant/activity";
+export default function Activity({ showNav }) {
   return (
-    <section className=" [&>*]:mb-3 ">
+    <section className=" [&>*]:mb-1 ">
       <LightHeading text="Activity" showNav={showNav}></LightHeading>
-      <GenericNavComponent
-        text="Submit a link"
-        Icon={Link} showNav={showNav}
-      ></GenericNavComponent>
-      <GenericNavComponent
-        text="Bookmarks"
-        Icon={Bookmark} showNav={showNav}
-      ></GenericNavComponent>
-      <GenericNavComponent showNav={showNav} text="History" Icon={Eye}></GenericNavComponent>
+      {ACTIVITY.map((act, i) => (
+        <GenericNavComponent
+          key={i}
+          text={act.text}
+          Icon={act.logo}
+          round={act.round}
+          showNav={showNav}
+        />
+      ))}
     </section>
   );
 }
